@@ -25,7 +25,7 @@ class SideBar extends React.Component {
         </Link>
         <Link
           className="sidebar-icon"
-          to={'/registers'}
+          to={'/reports'}
         >
           <i className="material-icons">event_note</i>
         </Link>

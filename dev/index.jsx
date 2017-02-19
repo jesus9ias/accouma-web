@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './app';
 import Login from './components/login/Login';
 import Home from './components/home/Home';
-import Me from './components/me/me';
+import Me from './components/me/Me';
 import Users from './components/users/UsersContainer';
 import NewUser from './components/users/NewUserContainer';
 import EditUser from './components/users/EditUserContainer';
 import Accounts from './components/accounts/AccountsContainer';
 import NewAccount from './components/accounts/NewAccount';
 import EditAccount from './components/accounts/EditAccount';
+import AccountRegisters from './components/AccountRegisters/AccountRegistersContainer';
+import Reports from './components/Reports/ReportsContainer';
 //  import Registers from './components/registers/registers';
 //  import NewRegister from './components/registers/newRegister';
 import {
@@ -51,6 +53,8 @@ ReactDOM.render(
           <Route path="new" components={{ new: NewAccount }} />
           <Route path=":id" components={{ edit: EditAccount }} />
         </Route>
+        <Route path="accounts/:id/registers" component={AccountRegisters} />
+        <Route path="reports" component={Reports} />
       </Route>
       <Route path="/login" component={Login} />
       <Redirect from="*" to="/" />
