@@ -45,22 +45,22 @@ class NavBar extends React.Component {
             headStyles={{color: 'black'}}
           >
             <Link
-              className="sidebar-icon"
+              className="megaSidebar-item"
               to={'/users'}
             >
-              <p><i className="material-icons">group</i> Users</p>
+              <i className="material-icons">group</i> Users
             </Link>
             <Link
-              className="sidebar-icon"
+              className="megaSidebar-item"
               to={'/accounts'}
             >
-              <p><i className="material-icons">attach_money</i></p>
+              <i className="material-icons">attach_money</i> Accounts
             </Link>
             <Link
-              className="sidebar-icon"
-              to={'/registers'}
+              className="megaSidebar-item"
+              to={'/reports'}
             >
-              <p><i className="material-icons">event_note</i></p>
+              <i className="material-icons">event_note</i> Reports
             </Link>
           </MegaSidenav>
         </div>
@@ -73,7 +73,7 @@ class NavBar extends React.Component {
             className="navbar-icon"
             to={'/me'}
           >
-            <p><i className="material-icons">face</i></p>
+            <p className="navbar-item"><i className="material-icons">face</i></p>
           </Link>
         </div>
       </nav>

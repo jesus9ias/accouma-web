@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var webserver = require('gulp-webserver');
-//var sass = require('gulp-sass');
+var sass = require('gulp-sass');
 var scsslint = require('gulp-scsslint');
 var browserify = require('browserify');
 var babelify = require('babelify');
@@ -50,7 +50,7 @@ gulp.task('vendor', function() {
 gulp.task('serve', function() {
   gulp.watch('./dev/**/*.jsx', ['build']);
   gulp.watch('./dev/**/*.js', ['build']);
-  //gulp.watch(['./dev/**/*.scss'], ['sass']);
+  gulp.watch(['./dev/**/*.scss'], ['sass']);
   gulp.watch(['./dev/vendor/**/*'], ['vendor']);
 })
 

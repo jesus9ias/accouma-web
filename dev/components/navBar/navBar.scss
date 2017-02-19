@@ -27,6 +27,15 @@
     padding: 0 10px;
   }
 
+  .megaSidebar-item {
+    display: flex;
+    color: black;
+    padding: 0px 10px;
+    .material-icons {
+      margin-right: 5px,
+    }
+  }
+
 }
 
 nav ul a{

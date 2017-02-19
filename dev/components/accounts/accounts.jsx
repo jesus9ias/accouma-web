@@ -51,6 +51,13 @@ class Accounts extends React.Component {
                         <Link
                           key={2}
                           className="general-cardicon-button waves-effect btn-flat"
+                          to={`/accounts/${account.id}/registers`}
+                        >
+                          <i className="material-icons">description</i>
+                        </Link>,
+                        <Link
+                          key={3}
+                          className="general-cardicon-button waves-effect btn-flat"
                           to={'/accounts'}
                         >
                           <i className="material-icons">delete</i>
