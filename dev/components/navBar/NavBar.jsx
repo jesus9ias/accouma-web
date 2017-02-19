@@ -69,12 +69,22 @@ class NavBar extends React.Component {
         </div>
         <div className="navbar-options-container">
           <a><i className="material-icons">add</i></a>
-          <Link
-            className="navbar-icon"
-            to={'/me'}
+          <Dropdown
+            trigger={<p className="navbar-item"><i className="material-icons">face</i></p>}
           >
-            <p className="navbar-item"><i className="material-icons">face</i></p>
-          </Link>
+            <Link
+              className="navbar-icon"
+              to={'/me'}
+            >
+              <i className="material-icons">perm_identity</i> My Profile
+            </Link>
+            <Link
+              className="navbar-icon"
+              to={'/logout'}
+            >
+              <i className="material-icons">power_settings_new</i> Logout
+            </Link>
+          </Dropdown>
         </div>
       </nav>
     );

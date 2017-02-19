@@ -37,7 +37,7 @@ let store = applyMiddleware(
 )(createStore)(theApp);
 
 ReactDOM.render(
-  <Provider store={store} >
+  <Provider store={store}>
     <Router history={browserHistory}>
       <Route path="/" component={IsLogued(App)}>
         <IndexRoute component={Home} />

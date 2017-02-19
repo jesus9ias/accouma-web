@@ -32,7 +32,9 @@ gulp.task('build', function() {
     extensions: ['.jsx', '.js'],
     debug: true
   })
-  .transform(babelify)
+  .transform(babelify.configure({
+    presets: ["es2015", "react"]
+  }))
   .bundle()
   .pipe(source('bundle.js'))
   .pipe(gulp.dest('./app/' + env + '/js'));
