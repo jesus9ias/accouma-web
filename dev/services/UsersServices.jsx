@@ -1,7 +1,7 @@
 import axios from 'axios';
 import storage from 'key-storage';
 import config from '../config';
-import { queryString } from '../utils/Utils';
+import Utils from '../utils/Utils';
 
 class UsersServices {
   getUsers() {
@@ -9,7 +9,7 @@ class UsersServices {
     if (token === null) {
       return axios();
     } else {
-      const query_sring = queryString({
+      const query_sring = Utils.queryString({
         token: token
       });
       return axios({
@@ -25,7 +25,7 @@ class UsersServices {
     if (token === null) {
       return axios();
     } else {
-      const query_sring = queryString({
+      const query_sring = Utils.queryString({
         token: token
       });
       return axios({
@@ -43,7 +43,7 @@ class UsersServices {
     } else {
       user['id'] = id;
       user['token'] = token;
-      const query_sring = queryString(user);
+      const query_sring = Utils.queryString(user);
       return axios({
         method: 'PUT',
         url: `${config.API_URL}/users/${id}?${query_sring}`,
@@ -57,7 +57,7 @@ class UsersServices {
     if (token === null) {
       return axios();
     } else {
-      const query_sring = queryString({
+      const query_sring = Utils.queryString({
         token: token,
         nick: userData.nick,
         names: userData.names,

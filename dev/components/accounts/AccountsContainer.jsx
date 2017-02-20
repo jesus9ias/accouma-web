@@ -5,8 +5,12 @@ import { accountsActions } from '../../redux/actions';
 const allActions = Object.assign({}, accountsActions);
 
 function mapStateToProps(state) {
+  const accounts = state.accounts.get('accounts') || [];
+  const voidState = (accounts.length == 0 && state.accounts.loading == false)? true : false;
+
   return {
-    accounts: state.accounts.accounts
+    accounts,
+    voidState
   };
 }
 

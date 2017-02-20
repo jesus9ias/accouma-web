@@ -10,3 +10,4 @@ export const LOADING_USERS = 'users:LOADING_ALL';
 export const GET_ALL_ACCOUNTS = 'accounts:GET_ALL';
 export const ADD_ONE_ACCOUNT = 'accounts:ADD_ONE';
 export const DELETE_ONE_ACCOUNT = 'accounts:DELETE_ONE';
+export const LOADING_ACCOUNTS = 'accounts:LOADING_ALL';

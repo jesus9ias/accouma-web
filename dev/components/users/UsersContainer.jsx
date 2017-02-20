@@ -6,11 +6,8 @@ const allActions = Object.assign({}, usersActions);
 
 function mapStateToProps(state) {
 
-  let users = [];
-  let voidState = false;
-
-  users = state.users.get('users');
-  voidState = (users.length == 0 && state.users.loading == false)? true : false;
+  const users = state.users.get('users') || [];
+  const voidState = (users.length == 0 && state.users.loading == false)? true : false;
 
   return {
     users,
