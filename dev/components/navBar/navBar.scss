@@ -36,6 +36,12 @@
     }
   }
 
+  .user_dropdown {
+    min-width: 130px;
+    .navbar-icon {
+      display: flex;
+    }
+  }
 }
 
 nav ul a{

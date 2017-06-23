@@ -71,6 +71,7 @@ class NavBar extends React.Component {
           <a><i className="material-icons">add</i></a>
           <Dropdown
             trigger={<p className="navbar-item"><i className="material-icons">face</i></p>}
+            className="user_dropdown"
           >
             <Link
               className="navbar-icon"

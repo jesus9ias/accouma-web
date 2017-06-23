@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 import {
   Row,
   Col,
-  Card
+  Card,
+  Button
 } from 'react-materialize';
 import VoidState from '../../common/VoidState';
 import InnerLoader from '../../common/InnerLoader';
@@ -14,15 +15,12 @@ class Reports extends React.Component {
     this.state = { voidState: false };
   }
 
-  componentWillMount() {
-  }
-
-
-
   render() {
     return (
       <div className="general-block">
         Reports
+
+        <Button waves='light'>Global Report</Button>
       </div>
     );
   }
