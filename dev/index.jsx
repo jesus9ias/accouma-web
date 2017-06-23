@@ -12,8 +12,6 @@ import NewAccount from './components/accounts/NewAccount';
 import EditAccount from './components/accounts/EditAccount';
 import AccountRegisters from './components/AccountRegisters/AccountRegistersContainer';
 import Reports from './components/Reports/ReportsContainer';
-//  import Registers from './components/registers/registers';
-//  import NewRegister from './components/registers/newRegister';
 import {
   Router,
   Route,

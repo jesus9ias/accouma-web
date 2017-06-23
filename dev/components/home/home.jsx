@@ -55,12 +55,12 @@ class Home extends React.Component {
               <Card
                 className="darken-1 card"
                 textClassName="white-text"
-                title="Registers"
+                title="Reports"
                 actions={[
                   <Link
                     key={1}
                     className="general-cardicon-button waves-effect btn-flat"
-                    to={'/registers'}
+                    to={'/reports'}
                   >
                     <i className="material-icons">arrow_forward</i>
                   </Link>
