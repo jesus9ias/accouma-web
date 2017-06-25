@@ -13,27 +13,31 @@ class Registers extends React.Component {
       <Table>
         <thead>
           <tr>
-            <th data-field="id">Name</th>
-            <th data-field="name">Item Name</th>
-            <th data-field="price">Item Price</th>
+            <th data-field="concept">Concept</th>
+            <th data-field="in">In</th>
+            <th data-field="out">Out</th>
+            <th data-field="type">Type</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <td>Alvin</td>
-            <td>Eclair</td>
-            <td>$0.87</td>
+            <td>Today food</td>
+            <td>$0.00</td>
+            <td>$120.40</td>
+            <td>Normal</td>
           </tr>
           <tr>
-            <td>Alan</td>
-            <td>Jellybean</td>
-            <td>$3.76</td>
+            <td>Today food</td>
+            <td>$0.00</td>
+            <td>$120.40</td>
+            <td>Normal</td>
           </tr>
           <tr>
-            <td>Jonathan</td>
-            <td>Lollipop</td>
-            <td>$7.00</td>
+            <td>Today food</td>
+            <td>$0.00</td>
+            <td>$120.40</td>
+            <td>Normal</td>
           </tr>
         </tbody>
       </Table>

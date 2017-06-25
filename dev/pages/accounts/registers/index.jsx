@@ -11,9 +11,9 @@ import {
   Icon,
   Modal
 } from 'react-materialize';
-import { accountsActions } from '../../redux/actions';
-import VoidState from '../../common/VoidState';
-import InnerLoader from '../../common/InnerLoader';
+import { accountsActions } from '../../../redux/actions';
+import VoidState from '../../../common/VoidState';
+import InnerLoader from '../../../common/InnerLoader';
 import NewRegister from './NewRegister';
 import Registers from './Registers';
 

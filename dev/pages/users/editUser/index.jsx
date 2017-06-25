@@ -6,8 +6,8 @@ import {
   Col,
   Card
 } from 'react-materialize';
-import { usersActions } from '../../redux/actions';
-import Backdrop from '../../common/Backdrop';
+import { usersActions } from '../../../redux/actions';
+import Backdrop from '../../../common/Backdrop';
 
 class EditUser extends React.Component {
   constructor(props) {

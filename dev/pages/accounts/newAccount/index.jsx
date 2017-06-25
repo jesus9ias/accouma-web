@@ -6,10 +6,10 @@ import {
   Col,
   Card
 } from 'react-materialize';
-import { accountsActions } from '../../redux/actions';
+import { accountsActions } from '../../../redux/actions';
 
 
-import Backdrop from '../../common/Backdrop';
+import Backdrop from '../../../common/Backdrop';
 
 class NewAccount extends React.Component {
 
