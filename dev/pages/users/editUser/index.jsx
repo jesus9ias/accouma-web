@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import {
   Row,
   Col,
   Card
 } from 'react-materialize';
-
+import { usersActions } from '../../redux/actions';
 import Backdrop from '../../common/Backdrop';
 
 class EditUser extends React.Component {
@@ -108,4 +109,15 @@ class EditUser extends React.Component {
   }
 }
 
-export default EditUser;
+const allActions = Object.assign({}, usersActions);
+
+function mapStateToProps(state) {
+  let user = {};
+  user = state.users.get('user');
+
+  return {
+    user
+  };
+}
+
+export default connect(mapStateToProps, allActions)(EditUser);

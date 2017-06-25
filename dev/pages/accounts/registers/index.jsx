@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import { MegaSidenav } from 'react-mega-sidenav';
 import {
   Row,
@@ -10,6 +11,7 @@ import {
   Icon,
   Modal
 } from 'react-materialize';
+import { accountsActions } from '../../redux/actions';
 import VoidState from '../../common/VoidState';
 import InnerLoader from '../../common/InnerLoader';
 import NewRegister from './NewRegister';
@@ -67,4 +69,10 @@ class AccountRegisters extends React.Component {
 
 AccountRegisters.propTypes = {};
 
-export default AccountRegisters;
+const allActions = Object.assign({}, accountsActions);
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps, allActions)(AccountRegisters);

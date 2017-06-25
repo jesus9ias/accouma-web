@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import {
   Row,
   Col,
   Card,
   Button
 } from 'react-materialize';
+import { accountsActions } from '../../redux/actions';
 import VoidState from '../../common/VoidState';
 import InnerLoader from '../../common/InnerLoader';
 
@@ -28,4 +30,10 @@ class Reports extends React.Component {
 
 Reports.propTypes = {};
 
-export default Reports;
+const allActions = Object.assign({}, accountsActions);
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps, allActions)(Reports);

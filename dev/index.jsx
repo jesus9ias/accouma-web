@@ -1,17 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
-import Login from './components/login/Login';
-import Home from './components/home/Home';
-import Me from './components/me/Me';
-import Users from './components/users/UsersContainer';
-import NewUser from './components/users/NewUserContainer';
-import EditUser from './components/users/EditUserContainer';
-import Accounts from './components/accounts/AccountsContainer';
-import NewAccount from './components/accounts/NewAccountContainer';
-import EditAccount from './components/accounts/EditAccount';
-import AccountRegisters from './components/AccountRegisters/AccountRegistersContainer';
-import Reports from './components/Reports/ReportsContainer';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
 import {
   Router,
   Route,
@@ -20,11 +11,21 @@ import {
   Redirect
 } from 'react-router';
 
+import App from './app';
+import Login from './pages/login/Login';
+import Home from './pages/home/Home';
+import Me from './pages/me/Me';
+import Users from './pages/users';
+import NewUser from './pages/users/newUser';
+import EditUser from './pages/users/editUser';
+import Accounts from './pages/accounts';
+import NewAccount from './pages/accounts/newAccount';
+import EditAccount from './pages/accounts/editAccount';
+import AccountRegisters from './pages/accounts/registers';
+import Reports from './pages/Reports';
+
 import IsLogued from './utils/IsLogued';
 
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
 import theApp from './redux/reducers';
 import logger from './redux/middleware/logger';
 

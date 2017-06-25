@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import {
   Row,
   Col,
   Card
 } from 'react-materialize';
+import { usersActions } from '../../redux/actions';
 import VoidState from '../../common/VoidState';
 import UsersLoader from './UsersLoader';
 
@@ -87,4 +89,17 @@ Users.propTypes = {
   users: React.PropTypes.array
 };
 
-export default Users;
+const allActions = Object.assign({}, usersActions);
+
+function mapStateToProps(state) {
+
+  const users = state.users.get('users') || [];
+  const voidState = (users.length == 0 && state.users.loading == false)? true : false;
+
+  return {
+    users,
+    voidState
+  };
+}
+
+export default connect(mapStateToProps, allActions)(Users);

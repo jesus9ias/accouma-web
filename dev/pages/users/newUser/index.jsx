@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, browserHistory } from 'react-router';
+import { connect } from 'react-redux';
 import {
   Row,
   Col,
   Card
 } from 'react-materialize';
-
+import { usersActions } from '../../redux/actions';
 import Backdrop from '../../common/Backdrop';
 
 class NewUser extends React.Component {
@@ -126,4 +127,10 @@ class NewUser extends React.Component {
   }
 }
 
-export default NewUser;
+const allActions = Object.assign({}, usersActions);
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps, allActions)(NewUser);

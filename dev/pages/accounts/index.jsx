@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { connect } from 'react-redux';
 import {
   Row,
   Col,
   Card
 } from 'react-materialize';
+import { accountsActions } from '../../redux/actions';
 import VoidState from '../../common/VoidState';
 import InnerLoader from '../../common/InnerLoader';
 
@@ -86,6 +88,18 @@ class Accounts extends React.Component {
   }
 }
 
+const allActions = Object.assign({}, accountsActions);
+
+function mapStateToProps(state) {
+  const accounts = state.accounts.get('accounts') || [];
+  const voidState = (accounts.length == 0 && state.accounts.loading == false)? true : false;
+
+  return {
+    accounts,
+    voidState
+  };
+}
+
 Accounts.propTypes = {
   getAllAccounts: React.PropTypes.func.isRequired,
   voidState: React.PropTypes.bool.isRequired,
@@ -94,4 +108,4 @@ Accounts.propTypes = {
   accounts: React.PropTypes.array
 };
 
-export default Accounts;
+export default connect(mapStateToProps, allActions)(Accounts);

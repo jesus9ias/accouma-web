@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link, browserHistory } from 'react-router';
 import {
   Row,
   Col,
   Card
 } from 'react-materialize';
+import { accountsActions } from '../../redux/actions';
+
 
 import Backdrop from '../../common/Backdrop';
 
@@ -106,4 +109,10 @@ NewAccount.propTypes = {
   saveAccount: React.PropTypes.func.isRequired
 };
 
-export default NewAccount;
+const allActions = Object.assign({}, accountsActions);
+
+function mapStateToProps(state) {
+  return {};
+}
+
+export default connect(mapStateToProps, allActions)(NewAccount); ;
