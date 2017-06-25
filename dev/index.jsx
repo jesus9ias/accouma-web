@@ -8,7 +8,7 @@ import Users from './components/users/UsersContainer';
 import NewUser from './components/users/NewUserContainer';
 import EditUser from './components/users/EditUserContainer';
 import Accounts from './components/accounts/AccountsContainer';
-import NewAccount from './components/accounts/NewAccount';
+import NewAccount from './components/accounts/NewAccountContainer';
 import EditAccount from './components/accounts/EditAccount';
 import AccountRegisters from './components/AccountRegisters/AccountRegistersContainer';
 import Reports from './components/Reports/ReportsContainer';

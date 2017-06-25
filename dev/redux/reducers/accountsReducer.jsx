@@ -13,6 +13,8 @@ export default (state = initialState, action) => {
       return state.update('loading', value => action.loading);
     case actions.GET_ALL_ACCOUNTS:
       return state.update('accounts', value => action.accounts);
+    case actions.ADD_ONE_ACCOUNT:
+      return state.update('accounts', value => [action.data, ...state.get('accounts')]);
     default:
       return state;
   }

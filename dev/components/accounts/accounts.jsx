@@ -70,6 +70,12 @@ class Accounts extends React.Component {
               </Link>
             </VoidState>
           </Row>
+          <Link
+            to={'/accounts/new'}
+            className="button button-add btn-floating btn-large waves-effect waves-light red"
+          >
+            <i className="material-icons">add</i>
+          </Link>
         </div>
         <div>
           {this.props.edit}

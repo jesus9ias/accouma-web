@@ -10,5 +10,15 @@ export default {
     }).catch((error) => {
 
     });
+  },
+
+  saveAccount: (data) => (dispatch) => {
+    dispatch({ type: actions.LOADING, data: true });
+    AccountsServices.saveAccount(data).then((response) => {
+      dispatch({ type: actions.ADD_ONE_ACCOUNT, data });
+      dispatch({ type: actions.LOADING, data: false });
+    }).catch((error) => {
+
+    });
   }
 };
